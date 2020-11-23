@@ -14,7 +14,7 @@ You can follow the same steps to copy your Element iOS OCR SDK.
 
 To run the demo app, click on the arrow on the top left:
 
-![run](https://github.com/Element1/element-ios-ocr-sdk-example/raw/master/images/run.png "run")
+![run](https://github.com/Element1/element-ios-ocr-sdk-example/raw/main/images/run.png "run")
 
 - Note that the XCode project is set to "Automatically manage signing" so you will need to be signed into your Apple developer account in order to run the demo app on your phone (see https://developer.apple.com/library/content/qa/qa1814/_index.html).
 
