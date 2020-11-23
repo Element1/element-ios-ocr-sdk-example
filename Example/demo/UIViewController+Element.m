@@ -32,7 +32,7 @@
                 [self.navigationController popToRootViewControllerAnimated:YES];
             } enrollmentMode:ELTEnrollmentModeRemote cardImages:cardImages additionalOcrParameters:additionalParams enrollmentAction:ELTOcrPostEnrollmentActionCardMatching];
             [viewController.navigationController pushViewController:feiv animated:YES];
-        } cancelBlock:^{
+        } cancelBlock:^(UIViewController *viewController) {
             [self.navigationController popToRootViewControllerAnimated:YES];
         } ocrScanParameters:params];
         [viewController.navigationController pushViewController:scanVc animated:YES];

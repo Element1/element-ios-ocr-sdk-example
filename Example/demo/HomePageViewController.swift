@@ -211,6 +211,7 @@ class HomePageViewController: UIViewController {
                         viewController.navigationController?.pushViewController(feoiv, animated: true)
                     }
                 }, cancelBlock: {
+                    (viewController) in
                     // cancelled
                     self.navigationController?.popToRootViewController(animated: true)
                 }, ocrScanParameters: ocrScanParameters)
@@ -267,6 +268,7 @@ class HomePageViewController: UIViewController {
                 let scanVc = ScanDocumentViewController(accountScannedBlock: { (viewController, cardImages, account) in
                     self.navigationController?.popToRootViewController(animated: true)
                 }, cancelBlock: {
+                    (viewController) in
                     // cancelled
                     self.navigationController?.popToRootViewController(animated: true)
                 }, ocrScanParameters: ocrScanParameters)
@@ -318,6 +320,7 @@ class HomePageViewController: UIViewController {
                         viewController.navigationController?.pushViewController(feoiv, animated: true)
                     }
                 }, cancelBlock: {
+                    (viewController) in
                     print("user cancelled")
                     self.navigationController?.popToRootViewController(animated: true)
                 }, ocrScanParameters: ocrScanParameters)!, animated: true)
