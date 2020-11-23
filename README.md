@@ -8,7 +8,7 @@ The Element OCR iOS SDK supports iOS 10 and above.
 
 ## Using the demo application
 
-Follow these steps (https://raw.githubusercontent.com/Element1/element-ios-face-sdk-local-example/master/README.md) to copy the Element iOS Face SDK framework and bundles to the sample project and update the sample app's bundle identifier.
+Follow these steps on the [Face SDK Sample app README](https://raw.githubusercontent.com/Element1/element-ios-face-sdk-local-example/master/README.md) to copy the Element iOS Face SDK framework and bundles to the sample project and update the sample app's bundle identifier.
 
 You can follow the same steps to copy your Element iOS OCR SDK.
 
