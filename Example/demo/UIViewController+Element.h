@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 #if !(TARGET_IPHONE_SIMULATOR)
 
+- (void)objc_startOcrWithCardMatching:(void(^)(NSNumber *))block;
+
 #endif
 
 @end

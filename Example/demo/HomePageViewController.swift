@@ -152,6 +152,29 @@ class HomePageViewController: UIViewController {
     }
     
     @objc func startOcrWithCardMatching() {
+        let useObjc = true
+        
+        if useObjc {
+            self.objc_startOcrWithCard(matching: { (confidencScore) in
+                self.navigationController?.popToRootViewController(animated: true)
+                self.reloadData()
+                if confidencScore.floatValue > 0.90 {
+                    let ev = ElementView(frame: UIApplication.shared.keyWindow!.frame, image: UIImage(named: "success")!, title: "Enrolled successfully", subtitle: nil, buttonTitle: "Done") { (elementView) in
+                        elementView.removeFromSuperview()
+                    }
+                    self.view.addSubview(ev)
+                    ev.pinToSuperview()
+                } else {
+                    let ev = ElementView(frame: UIApplication.shared.keyWindow!.frame, image: UIImage(named: "failure")!, title: "The card doesn't seem to match your selfie", subtitle: nil, buttonTitle: "Done") { (elementView) in
+                        elementView.removeFromSuperview()
+                    }
+                    self.view.addSubview(ev)
+                    ev.pinToSuperview()
+                }
+            })
+            return
+        }
+    
         let mode : OcrReviewType = .localReviewOnly
         DispatchQueue.main.async {
             let vc = DocumentTypePickerViewController(/*documentTypes: docs*/) { (viewController, selectedDoc) in
