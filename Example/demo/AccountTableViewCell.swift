@@ -73,7 +73,13 @@ class AccountTableViewCell: UITableViewCell, TableViewCellProtocol {
         } else {
             self.nameLabel.text = model.firstName + " " + model.lastName
         }
-        self.bottomLabel.text = model.userId
+        if model.ocrReviewStatus == .rejected {
+            self.bottomLabel.text = "Review rejected"
+        } else if model.ocrReviewStatus == .waiting {
+            self.bottomLabel.text = "Waiting for review, tap to check"
+        } else {
+            self.bottomLabel.text = model.userId
+        }
     }
     
     class func heightForModel(_ model: ELTAccount) -> CGFloat {

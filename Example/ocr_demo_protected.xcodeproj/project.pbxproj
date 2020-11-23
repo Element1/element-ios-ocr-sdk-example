@@ -25,7 +25,6 @@
 		4D4CCC5A1FE7D01E00FC5DEC /* Info_protected_face.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D4CCC581FE7D01E00FC5DEC /* Info_protected_face.plist */; };
 		4DA7D88021A38FB200A865A0 /* UIViewController+Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7D87F21A38FB200A865A0 /* UIViewController+Element.m */; };
 		4DB724E01FB3DFC000DA767B /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB724DC1FB3DFC000DA767B /* AccountTableViewCell.swift */; };
-		4DB724E11FB3DFC000DA767B /* FaceAccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB724DD1FB3DFC000DA767B /* FaceAccountTableViewCell.swift */; };
 		4DB724E31FB3DFC000DA767B /* UserSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB724DF1FB3DFC000DA767B /* UserSignInViewController.swift */; };
 		4DEA860B256818480069AFF4 /* SelfieDot.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4DEA860A256818480069AFF4 /* SelfieDot.bundle */; };
 		4DEA860D25682A2A0069AFF4 /* ElementOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DEA860C25682A2A0069AFF4 /* ElementOCR.framework */; };
@@ -69,7 +68,6 @@
 		4DA7D87E21A38FB200A865A0 /* UIViewController+Element.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Element.h"; sourceTree = "<group>"; };
 		4DA7D87F21A38FB200A865A0 /* UIViewController+Element.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Element.m"; sourceTree = "<group>"; };
 		4DB724DC1FB3DFC000DA767B /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
-		4DB724DD1FB3DFC000DA767B /* FaceAccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceAccountTableViewCell.swift; sourceTree = "<group>"; };
 		4DB724DF1FB3DFC000DA767B /* UserSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignInViewController.swift; sourceTree = "<group>"; };
 		4DEA860A256818480069AFF4 /* SelfieDot.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SelfieDot.bundle; path = Frameworks/SelfieDot.bundle; sourceTree = "<group>"; };
 		4DEA860C25682A2A0069AFF4 /* ElementOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ElementOCR.framework; path = demo/Frameworks/ElementOCR.framework; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 				4DB724DC1FB3DFC000DA767B /* AccountTableViewCell.swift */,
 				4D4CCC561FE7CD3E00FC5DEC /* AppDelegateProtected.swift */,
 				4D08C1721FE4314A00C2503A /* HomePageViewController.swift */,
-				4DB724DD1FB3DFC000DA767B /* FaceAccountTableViewCell.swift */,
 				4D37426A1D9D8170009CB5B2 /* LoadingController.swift */,
 				4D15064A1DB82DE1005C5BAE /* TableView.swift */,
 				4DEA860F25682F710069AFF4 /* UIButton+ELTDemo.swift */,
@@ -249,7 +246,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DEA861025682F710069AFF4 /* UIButton+ELTDemo.swift in Sources */,
-				4DB724E11FB3DFC000DA767B /* FaceAccountTableViewCell.swift in Sources */,
 				4D08C1761FE4314A00C2503A /* HomePageViewController.swift in Sources */,
 				4D37426D1D9D861B009CB5B2 /* UIScreen+Element.swift in Sources */,
 				4D37426F1D9D874D009CB5B2 /* UIView+Element.swift in Sources */,

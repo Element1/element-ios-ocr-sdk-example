@@ -46,7 +46,7 @@ class HomePageViewController: UIViewController {
         
         self.title = "Element OCR Example";
         
-        self.tableView.registerClass(FaceAccountTableViewCell.self)
+        self.tableView.registerClass(AccountTableViewCell.self)
         self.tableView.backgroundColor = .clear
         self.view.addSubview(self.tableView)
         
@@ -310,13 +310,12 @@ class HomePageViewController: UIViewController {
         var sectionModel = TableViewSectionModel()
         
         for account in self.accounts {
-            sectionModel.cellModels.append(TableViewCellModel<FaceAccountTableViewCell>(model: account, canBeSelected: true, onSelect: {
+            sectionModel.cellModels.append(TableViewCellModel<AccountTableViewCell>(model: account, canBeSelected: true, onSelect: {
                 self.handleTap(account)
             }, onDisplay: nil, onSwipeToDelete: {
                 print("ask confirmation to delete", account)
                 self.confirmDelete(account: account)
             }))
-            
         }
         self.ds = TableViewDataSource(section: sectionModel)
         self.tableView.delegate = ds
