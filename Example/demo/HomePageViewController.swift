@@ -236,10 +236,12 @@ class HomePageViewController: UIViewController {
                     buttons.append(AlertButton(text: "Card Matching / ID Validation", block: {
                         // doc scanner
                         if let vc = CardMatchingIntroViewController(account: account, matchedBlock: {
+                            _ in
                             account.documentVerified = true
                             account.save()
                             self.navigationController?.popToRootViewController(animated: true)
                         }, cancelBlock: {
+                            _ in 
                             self.navigationController?.popToRootViewController(animated: true)
                         }) {
                             self.navigationController?.pushViewController(vc, animated: true)

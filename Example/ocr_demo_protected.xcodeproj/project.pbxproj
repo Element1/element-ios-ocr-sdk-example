@@ -336,6 +336,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/demo/Frameworks",
@@ -350,7 +351,6 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "demo/ocrdemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
-				VALID_ARCHS = "arm64 armv7";
 			};
 			name = "Debug-Face";
 		};
@@ -413,6 +413,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/demo/Frameworks",
@@ -426,7 +427,6 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "demo/ocrdemo-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
-				VALID_ARCHS = "arm64 armv7";
 			};
 			name = "Release-Face";
 		};
