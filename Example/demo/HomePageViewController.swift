@@ -117,7 +117,7 @@ class HomePageViewController: UIViewController {
     
     func downloadOcrData(account: ELTAccount) {
         LoadingController.showLoading(String(format: "Downloading %@'s OCR data", account.firstName))
-        ElementOCRSDKTransaction.getOcrResult(for: account, successBlock: { (resp) in
+        ElementOCRSDKTransaction.getOcrReviewResult(for: account, successBlock: { (resp) in
             LoadingController.hideLoading()
             self.reloadData()
 
@@ -187,8 +187,8 @@ class HomePageViewController: UIViewController {
                         vc, account, details in
                         self.navigationController?.popToRootViewController(animated: true)
                         self.reloadData()
-                        if let detailsFloat = details as! NSNumber? {
-                            if detailsFloat.floatValue > 0.90 {
+                        if let cardMatchingConfidenceScore = details["cardMatchingConfidenceScore"] as? NSNumber {
+                            if cardMatchingConfidenceScore.floatValue > 0.90 {
                                 let ev = ElementView(frame: UIApplication.shared.keyWindow!.frame, image: UIImage(named: "success")!, title: "Enrolled successfully", subtitle: nil, buttonTitle: "Done") { (elementView) in
                                     elementView.removeFromSuperview()
                                 }
@@ -236,8 +236,8 @@ class HomePageViewController: UIViewController {
                     buttons.append(AlertButton(text: "Card Matching / ID Validation", block: {
                         // doc scanner
                         if let vc = CardMatchingIntroViewController(account: account, matchedBlock: {
-                            _ in
-                            account.documentVerified = true
+                            _,_,_  in
+                            account.documentVerificationStatus = .verified
                             account.save()
                             self.navigationController?.popToRootViewController(animated: true)
                         }, cancelBlock: {
@@ -402,7 +402,7 @@ class HomePageViewController: UIViewController {
             return
         } else if account.ocrReviewStatus == .uploadNeeded {
             LoadingController.showLoading("Uploading OCR Data")
-            ElementOCRSDKTransaction.uploadOcrData(for: account, successBlock: { (resp) in
+            ElementOCRSDKTransaction.uploadOcrDataToReview(for: account, successBlock: { (resp) in
                 LoadingController.hideLoading()
                 self.reloadData()
             }, errorBlock: { (resCode, error, errorMessage) in

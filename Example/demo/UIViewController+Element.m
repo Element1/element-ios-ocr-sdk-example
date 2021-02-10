@@ -25,12 +25,18 @@
         ScanDocumentViewController *scanVc = [[ScanDocumentViewController alloc] initWithAccountScannedBlock:^(UIViewController * viewController, NSArray<TaggedImage *> * cardImages, ELTAccount * account) {
             NSDictionary *additionalParams = [ElementOCRHelper additionalOcrParametersWithRequiredFields:requiredFields documentType:selectedDocument];
             // enrollment with card matching
-            FaceEnrollmentOCRIntroViewController *feiv = [[FaceEnrollmentOCRIntroViewController alloc] initWithAccount:account accountEnrolledBlock:^(UIViewController * viewController, ELTAccount * account, NSNumber *confidenceScore) {
+            FaceEnrollmentOCRIntroViewController *feiv = [[FaceEnrollmentOCRIntroViewController alloc] initWithAccount:account accountEnrolledBlock:^(UIViewController * vc, ELTAccount * acc, NSDictionary * details) {
                 // let the swift code show the result
-                block(confidenceScore);
-            } cancelBlock:^(UIViewController * viewController) {
+                NSNumber *confidenceScore = details[@"cardMatchingConfidenceScore"];
+                if (confidenceScore) {
+                    block(confidenceScore);
+                } else {
+                    [self.navigationController popToRootViewControllerAnimated:YES];
+                }
+            } cancelBlock:^(UIViewController * vc) {
                 [self.navigationController popToRootViewControllerAnimated:YES];
             } enrollmentMode:ELTEnrollmentModeRemote cardImages:cardImages additionalOcrParameters:additionalParams enrollmentAction:ELTOcrPostEnrollmentActionCardMatching];
+            
             [viewController.navigationController pushViewController:feiv animated:YES];
         } cancelBlock:^(UIViewController *viewController) {
             [self.navigationController popToRootViewControllerAnimated:YES];

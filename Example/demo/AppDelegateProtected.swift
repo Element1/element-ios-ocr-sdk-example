@@ -26,8 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 #if !(targetEnvironment(simulator))
         // TODO: replace YOUR_EAK with the EAK provided by Element
         ElementSDKConfiguration.shared().initialize(withConfigurationData: "YOUR_EAK")
-        // upload images to S3 (default is false)
-        ElementSDKConfiguration.shared().uploadImages = true
         // change the theme if needed
         ElementSDKConfiguration.shared().theme = .selfieDot
 #endif
