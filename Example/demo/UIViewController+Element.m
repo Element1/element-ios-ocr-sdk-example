@@ -19,11 +19,10 @@
 - (void)objc_startOcrWithCardMatching:(void(^)(NSNumber *))block {
     // select the document type
     DocumentTypePickerViewController *dpv = [[DocumentTypePickerViewController alloc] initWithDocumentSelectedBlock:^(UIViewController * viewController, OcrDocument * selectedDocument) {
-        NSArray *requiredFields = @[@"GIVEN_NAME", @"SURNAME", @"DATE_OF_BIRTH", @"DATE_OF_ISSUE", @"DATE_OF_EXPIRY", @"GENDER", @"SEX", @"NATIONALITY", @"ADDRESS"];
-        OcrScanParameters *params = [[OcrScanParameters alloc] initWithOcrReviewType:OcrReviewTypeLocalReviewOnly documentType:selectedDocument documentSideScanType:DocumentSideScanTypeFrontOnly requiredFields:requiredFields detectFace:YES];
+        OcrScanParameters *params = [[OcrScanParameters alloc] initWithOcrReviewType:OcrReviewTypeLocalReviewOnly documentType:selectedDocument detectFace:YES];
         // scan the document and perform OCR
         ScanDocumentViewController *scanVc = [[ScanDocumentViewController alloc] initWithAccountScannedBlock:^(UIViewController * viewController, NSArray<TaggedImage *> * cardImages, ELTAccount * account) {
-            NSDictionary *additionalParams = [ElementOCRHelper additionalOcrParametersWithRequiredFields:requiredFields documentType:selectedDocument];
+            NSDictionary *additionalParams = [ElementOCRHelper additionalOcrParametersWithDocumentType:selectedDocument];
             // enrollment with card matching
             FaceEnrollmentOCRIntroViewController *feiv = [[FaceEnrollmentOCRIntroViewController alloc] initWithAccount:account accountEnrolledBlock:^(UIViewController * vc, ELTAccount * acc, NSDictionary * details) {
                 // let the swift code show the result

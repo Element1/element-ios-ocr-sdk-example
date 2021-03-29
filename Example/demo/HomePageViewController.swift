@@ -179,10 +179,9 @@ class HomePageViewController: UIViewController {
         DispatchQueue.main.async {
             let vc = DocumentTypePickerViewController(/*documentTypes: docs*/) { (viewController, selectedDoc) in
                 print(selectedDoc)
-                let requiredFields = ["GIVEN_NAME", "SURNAME", "DATE_OF_BIRTH", "DATE_OF_ISSUE", "DATE_OF_EXPIRY", "GENDER", "SEX", "NATIONALITY", "ADDRESS"]
-                let ocrScanParameters = OcrScanParameters(ocrReviewType: mode, documentType: selectedDoc, documentSideScanType: .frontOnly, requiredFields: requiredFields, detectFace: true)
+                let ocrScanParameters = OcrScanParameters(ocrReviewType: mode, documentType: selectedDoc, detectFace: true)
                 let scanVc = ScanDocumentViewController(accountScannedBlock: { (viewController, cardImages, account) in
-                    let additionalOcrParameters : [ AnyHashable : Any ] = ElementOCRHelper.additionalOcrParameters(requiredFields: requiredFields, documentType: selectedDoc)
+                    let additionalOcrParameters : [ AnyHashable : Any ] = ElementOCRHelper.additionalOcrParameters(documentType: selectedDoc)
                     let feoiv = FaceEnrollmentOCRIntroViewController(account: account, accountEnrolledBlock: {
                         vc, account, details in
                         self.navigationController?.popToRootViewController(animated: true)
@@ -265,8 +264,7 @@ class HomePageViewController: UIViewController {
         DispatchQueue.main.async {
             let vc = DocumentTypePickerViewController(/*documentTypes: docs*/) { (viewController, selectedDoc) in
                 print(selectedDoc)
-                let requiredFields = ["GIVEN_NAME", "SURNAME", "DATE_OF_BIRTH", "DATE_OF_ISSUE", "DATE_OF_EXPIRY", "GENDER", "SEX", "NATIONALITY", "ADDRESS"]
-                let ocrScanParameters = OcrScanParameters(ocrReviewType: mode, documentType: selectedDoc, documentSideScanType: .frontOnly, requiredFields: requiredFields, detectFace: true)
+                let ocrScanParameters = OcrScanParameters(ocrReviewType: mode, documentType: selectedDoc, detectFace: true)
                 let scanVc = ScanDocumentViewController(accountScannedBlock: { (viewController, cardImages, account) in
                     self.navigationController?.popToRootViewController(animated: true)
                 }, cancelBlock: {
@@ -294,15 +292,14 @@ class HomePageViewController: UIViewController {
         DispatchQueue.main.async {
             let vc = DocumentTypePickerViewController(/*documentTypes: docs*/) { (viewController, selectedDoc) in
                 print(selectedDoc)
-                let requiredFields = ["GIVEN_NAME", "SURNAME", "DATE_OF_BIRTH", "DATE_OF_ISSUE", "DATE_OF_EXPIRY", "GENDER", "SEX", "NATIONALITY", "ADDRESS"]
-                let ocrScanParameters = OcrScanParameters(ocrReviewType: .none, documentType: selectedDoc, documentSideScanType: .frontOnly, requiredFields: requiredFields, detectFace: true)
+                let ocrScanParameters = OcrScanParameters(ocrReviewType: .none, documentType: selectedDoc, detectFace: true)
                 viewController.navigationController?.pushViewController(ScanDocumentViewController(documentScannedBlock: {
                     (viewController, cardImageArray) in
                     print("account created")
-                    let additionalOcrParameters : [ AnyHashable : Any ] = ElementOCRHelper.additionalOcrParameters(requiredFields: requiredFields, documentType: selectedDoc)
-                    let userId = NSUUID().uuidString.replacingOccurrences(of: "-", with: "")
+                    let additionalOcrParameters : [ AnyHashable : Any ] = ElementOCRHelper.additionalOcrParameters(documentType: selectedDoc)
+                    let userId = NSString.randomElementUserId()
                     let account = ELTAccount.createNewAccount(withUserId: userId)
-                    let feoiv = FaceEnrollmentOCRIntroViewController(account: account, accountEnrolledBlock: {
+                    let feoiv = FaceEnrollmentOCRIntroViewController(account: account!, accountEnrolledBlock: {
                         vc, account, details in
                         self.navigationController?.popToRootViewController(animated: true)
                         self.reloadData()
