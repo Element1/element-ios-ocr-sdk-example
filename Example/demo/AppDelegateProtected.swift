@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // TODO: replace YOUR_EAK with the EAK provided by Element
         let success = ElementSDKConfiguration.shared().initialize(withConfigurationData: "YOUR_EAK")
         assert(success, "Did your replace YOUR_EAK with your own EAK?")
-        ElementSDKConfiguration.shared()
+        ElementSDKConfiguration.shared().enableDebugLogs = true
         // change the theme if needed
         ElementSDKConfiguration.shared().uiTheme = ELTThemeSelfieDotV2()
 #endif
