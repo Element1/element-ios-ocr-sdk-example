@@ -73,12 +73,14 @@ class AccountTableViewCell: UITableViewCell, TableViewCellProtocol {
         } else {
             self.nameLabel.text = model.firstName + " " + model.lastName
         }
-        if model.ocrReviewStatus == .rejected {
-            self.bottomLabel.text = "Review rejected"
-        } else if model.ocrReviewStatus == .waiting {
+        if model.eKYCStatus == .uploadNeeded {
+            self.bottomLabel.text = "Upload needed, tap to upload"
+        } else if model.eKYCStatus == .rejected {
+            self.bottomLabel.text = "Review rejected, tap to re-scan"
+        } else if model.eKYCStatus == .waitingForReview {
             self.bottomLabel.text = "Waiting for review, tap to check"
         } else {
-            self.bottomLabel.text = model.userId
+            self.bottomLabel.text = "Ready"
         }
     }
     

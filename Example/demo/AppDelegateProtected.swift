@@ -25,9 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 #if !(targetEnvironment(simulator))
         // TODO: replace YOUR_EAK with the EAK provided by Element
-        ElementSDKConfiguration.shared().initialize(withConfigurationData: "YOUR_EAK")
+        let success = ElementSDKConfiguration.shared().initialize(withConfigurationData: "YOUR_EAK")
+        assert(success, "Did your replace YOUR_EAK with your own EAK?")
+        ElementSDKConfiguration.shared()
         // change the theme if needed
-        ElementSDKConfiguration.shared().theme = .selfieDot
+        ElementSDKConfiguration.shared().uiTheme = ELTThemeSelfieDotV2()
 #endif
 
         var vc : UIViewController? = nil
@@ -39,4 +41,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D08C1761FE4314A00C2503A /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D08C1721FE4314A00C2503A /* HomePageViewController.swift */; };
 		4D15064B1DB82DE1005C5BAE /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D15064A1DB82DE1005C5BAE /* TableView.swift */; };
+		4D1F5C2C27D0F6C6002C8C06 /* SelfieDotV2.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D1F5C2B27D0F6C6002C8C06 /* SelfieDotV2.bundle */; };
 		4D34566523A936D200EC83F4 /* CountdownDefault.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D34565E23A936D200EC83F4 /* CountdownDefault.bundle */; };
 		4D34566623A936D200EC83F4 /* LegacyCountdown.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D34565F23A936D200EC83F4 /* LegacyCountdown.bundle */; };
 		4D34566723A936D200EC83F4 /* FlowerPetals.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4D34566023A936D200EC83F4 /* FlowerPetals.bundle */; };
@@ -23,7 +24,6 @@
 		4D37426F1D9D874D009CB5B2 /* UIView+Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37426E1D9D874D009CB5B2 /* UIView+Element.swift */; };
 		4D4CCC571FE7CD3E00FC5DEC /* AppDelegateProtected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4CCC561FE7CD3E00FC5DEC /* AppDelegateProtected.swift */; };
 		4D4CCC5A1FE7D01E00FC5DEC /* Info_protected_face.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D4CCC581FE7D01E00FC5DEC /* Info_protected_face.plist */; };
-		4DA7D88021A38FB200A865A0 /* UIViewController+Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA7D87F21A38FB200A865A0 /* UIViewController+Element.m */; };
 		4DB724E01FB3DFC000DA767B /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB724DC1FB3DFC000DA767B /* AccountTableViewCell.swift */; };
 		4DB724E31FB3DFC000DA767B /* UserSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB724DF1FB3DFC000DA767B /* UserSignInViewController.swift */; };
 		4DEA860B256818480069AFF4 /* SelfieDot.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4DEA860A256818480069AFF4 /* SelfieDot.bundle */; };
@@ -50,6 +50,7 @@
 /* Begin PBXFileReference section */
 		4D08C1721FE4314A00C2503A /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		4D15064A1DB82DE1005C5BAE /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		4D1F5C2B27D0F6C6002C8C06 /* SelfieDotV2.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SelfieDotV2.bundle; path = Frameworks/SelfieDotV2.bundle; sourceTree = "<group>"; };
 		4D34565E23A936D200EC83F4 /* CountdownDefault.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = CountdownDefault.bundle; path = Frameworks/CountdownDefault.bundle; sourceTree = "<group>"; };
 		4D34565F23A936D200EC83F4 /* LegacyCountdown.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = LegacyCountdown.bundle; path = Frameworks/LegacyCountdown.bundle; sourceTree = "<group>"; };
 		4D34566023A936D200EC83F4 /* FlowerPetals.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = FlowerPetals.bundle; path = Frameworks/FlowerPetals.bundle; sourceTree = "<group>"; };
@@ -65,8 +66,6 @@
 		4D4CCC561FE7CD3E00FC5DEC /* AppDelegateProtected.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegateProtected.swift; sourceTree = "<group>"; };
 		4D4CCC581FE7D01E00FC5DEC /* Info_protected_face.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info_protected_face.plist; sourceTree = "<group>"; };
 		4DA7D87D21A38FB200A865A0 /* ocrdemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ocrdemo-Bridging-Header.h"; sourceTree = "<group>"; };
-		4DA7D87E21A38FB200A865A0 /* UIViewController+Element.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Element.h"; sourceTree = "<group>"; };
-		4DA7D87F21A38FB200A865A0 /* UIViewController+Element.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Element.m"; sourceTree = "<group>"; };
 		4DB724DC1FB3DFC000DA767B /* AccountTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
 		4DB724DF1FB3DFC000DA767B /* UserSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSignInViewController.swift; sourceTree = "<group>"; };
 		4DEA860A256818480069AFF4 /* SelfieDot.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = SelfieDot.bundle; path = Frameworks/SelfieDot.bundle; sourceTree = "<group>"; };
@@ -99,6 +98,7 @@
 		4D34566A23A936D800EC83F4 /* themes */ = {
 			isa = PBXGroup;
 			children = (
+				4D1F5C2B27D0F6C6002C8C06 /* SelfieDotV2.bundle */,
 				4DEA860A256818480069AFF4 /* SelfieDot.bundle */,
 				4D34565E23A936D200EC83F4 /* CountdownDefault.bundle */,
 				4D34566023A936D200EC83F4 /* FlowerPetals.bundle */,
@@ -149,8 +149,6 @@
 				4D37426E1D9D874D009CB5B2 /* UIView+Element.swift */,
 				4D3742681D9C92CB009CB5B2 /* UIViewController+ELT.swift */,
 				4DB724DF1FB3DFC000DA767B /* UserSignInViewController.swift */,
-				4DA7D87E21A38FB200A865A0 /* UIViewController+Element.h */,
-				4DA7D87F21A38FB200A865A0 /* UIViewController+Element.m */,
 				4DA7D87D21A38FB200A865A0 /* ocrdemo-Bridging-Header.h */,
 			);
 			name = sources;
@@ -230,6 +228,7 @@
 				4D37422F1D88667D009CB5B2 /* LaunchScreen.storyboard in Resources */,
 				4D4CCC5A1FE7D01E00FC5DEC /* Info_protected_face.plist in Resources */,
 				4D34566723A936D200EC83F4 /* FlowerPetals.bundle in Resources */,
+				4D1F5C2C27D0F6C6002C8C06 /* SelfieDotV2.bundle in Resources */,
 				4D37422C1D88667D009CB5B2 /* Assets.xcassets in Resources */,
 				4D34566523A936D200EC83F4 /* CountdownDefault.bundle in Resources */,
 				4D34566923A936D200EC83F4 /* LocalProcessing.bundle in Resources */,
@@ -250,7 +249,6 @@
 				4D37426D1D9D861B009CB5B2 /* UIScreen+Element.swift in Sources */,
 				4D37426F1D9D874D009CB5B2 /* UIView+Element.swift in Sources */,
 				4DB724E01FB3DFC000DA767B /* AccountTableViewCell.swift in Sources */,
-				4DA7D88021A38FB200A865A0 /* UIViewController+Element.m in Sources */,
 				4D15064B1DB82DE1005C5BAE /* TableView.swift in Sources */,
 				4D37426B1D9D8170009CB5B2 /* LoadingController.swift in Sources */,
 				4DB724E31FB3DFC000DA767B /* UserSignInViewController.swift in Sources */,
@@ -298,6 +296,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -344,13 +343,14 @@
 				INFOPLIST_FILE = demo/Info_protected_face.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				OTHER_SWIFT_FLAGS = "-D FACE_ONLY";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ocrsdkdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "demo/ocrdemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = "Debug-Face";
 		};
@@ -379,10 +379,11 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = U72288WT78;
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -409,8 +410,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Distribution";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = YES;
@@ -421,12 +422,13 @@
 				INFOPLIST_FILE = demo/Info_protected_face.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				OTHER_SWIFT_FLAGS = "-D FACE_ONLY";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.ocrsdkdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "demo/ocrdemo-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = "Release-Face";
 		};
